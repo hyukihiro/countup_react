@@ -4,6 +4,10 @@ import styled from 'react-emotion';
 
 const StyledButton = styled('button')`
   color: #ff00ff;
+  border: 2px solid #ff00ff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
 `;
 
 const Button = props => (

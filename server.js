@@ -36,7 +36,7 @@ browserSync({
     'app/images/**/*'
   ],
   notify         : false,
-  port           : 9000,
+  port           : 9999,
   open           : false,
   reloadOnRestart: true,
   ghostMode      : {
