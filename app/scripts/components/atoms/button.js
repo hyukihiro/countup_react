@@ -8,6 +8,10 @@ const StyledButton = styled('button')`
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 14px;
+  &:hover {
+    background-color: #ff00ff;
+    color: #fff;
+  }
 `;
 
 const Button = props => (
