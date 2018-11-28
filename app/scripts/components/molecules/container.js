@@ -16,10 +16,10 @@ const Wrap = styled('div')`
   transform: translate(-50%, -50%);
 `;
 
-const Container = props => (
+const Container = () => (
   <Wrap>
-    <Button label={props.label} />
-    <Text text={props.text} />
+    <Button />
+    <Text />
   </Wrap>
 );
 export default Container;

@@ -1,6 +1,7 @@
 /* @flow */
 import React from 'react';
 import styled from 'react-emotion';
+import { connect } from 'react-redux';
 
 const StyledButton = styled('button')`
   color: #ff00ff;
@@ -14,15 +15,33 @@ const StyledButton = styled('button')`
   }
 `;
 
-const Button = props => (
+const Button = plus => (
   <StyledButton
     type="button"
     onClick={event => {
       event.preventDefault();
-      console.log('a');
+      plus(1);
     }}
   >
-    {props.label}
+    足す
   </StyledButton>
 );
-export default Button;
+
+const mapStateToProps = state => {
+  return {
+    number: state
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    plus: num => {
+      dispatch({ type: 'PLUS', payload: { num } });
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Button);
