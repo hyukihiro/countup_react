@@ -3,9 +3,10 @@ import React from 'react';
 import styled from 'react-emotion';
 
 const StyledText = styled('p')`
-  color: #0ff;
-  font-size: 10px;
+  color: #222;
+  font-size: 14px;
+  padding: 20px 0;
 `;
 
-const Text = props => <StyledText type="p">{props.text}</StyledText>;
+const Text = props => <StyledText type="p">{props.number} ㍑</StyledText>;
 export default Text;
