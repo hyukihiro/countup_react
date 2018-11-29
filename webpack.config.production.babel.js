@@ -8,7 +8,7 @@ import { config } from './gulp/constants/config';
 export default merge.smart(baseConfig, {
 	mode: 'production',
 	entry: {
-    index: './app/scripts/index.js'
+    index: './app/scripts/App.js'
 	},
 	output: {
 		path: path.join(__dirname, config.dist, config.assets, config.js)

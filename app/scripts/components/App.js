@@ -1,10 +1,25 @@
 import React from 'react';
-import Container from './molecules/container';
+import Wrapper from './molecules/wrapper';
 
-const App = () => (
-  <div>
-    <Container />
-  </div>
-);
+class App extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+
+  render() {
+    const { text, number, plus, reset, resetText } = this.props;
+    return (
+      <div>
+        <Wrapper
+          text={text}
+          number={number}
+          plus={plus}
+          reset={reset}
+          resetText={resetText}
+        />
+      </div>
+    );
+  }
+}
 
 export default App;

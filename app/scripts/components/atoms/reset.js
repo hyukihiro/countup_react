@@ -4,27 +4,27 @@ import styled from 'react-emotion';
 
 const StyledButton = styled('button')`
   min-width: 100px;
-  color: #ff00ff;
-  border: 2px solid #ff00ff;
+  color: #0075fa;
+  border: 2px solid #0075fa;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 14px;
   &:hover {
-    background-color: #ff00ff;
+    background-color: #0075fa;
     color: #fff;
   }
 `;
 
-const Button = props => (
+const Reset = props => (
   <StyledButton
     type="button"
     onClick={event => {
       event.preventDefault();
-      props.plus(10);
+      props.reset();
     }}
   >
-    {props.text}
+    {props.resetText}
   </StyledButton>
 );
 
-export default Button;
+export default Reset;

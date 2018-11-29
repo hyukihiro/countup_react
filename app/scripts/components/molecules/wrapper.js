@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import Button from '../atoms/button';
 import Text from '../atoms/textField';
+import Reset from '../atoms/reset';
 
 const Wrap = styled('div')`
   display: flex;
@@ -9,17 +10,18 @@ const Wrap = styled('div')`
   align-items: center;
   flex-direction: column;
   width: 50%;
-  height: 100px;
+  height: 160px;
   left: 50%;
   top: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
 `;
 
-const Container = () => (
+const Wrapper = props => (
   <Wrap>
-    <Button />
-    <Text />
+    <Button text={props.text} plus={props.plus} />
+    <Text number={props.number} />
+    <Reset reset={props.reset} resetText={props.resetText} />
   </Wrap>
 );
-export default Container;
+export default Wrapper;

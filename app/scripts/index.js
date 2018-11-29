@@ -7,12 +7,12 @@ import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
 
-import reducer from './reducer';
+import rootReducers from './reducers';
 
 import './bootstrap';
-import App from './components/App';
+import App from './containers/App';
 
-const store = createStore(reducer);
+const store = createStore(rootReducers);
 
 const root = document.getElementById('root');
 render(
@@ -21,8 +21,3 @@ render(
   </Provider>,
   root
 );
-
-/**
- * TODO
- * クリックイベント
- */
