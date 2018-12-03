@@ -4,3 +4,7 @@ export const plus = num => {
 export const reset = () => {
   return { type: 'RESET' };
 };
+
+export const changeText = text => {
+  return { type: 'CHANGE_TEXT', payload: { text } };
+};
