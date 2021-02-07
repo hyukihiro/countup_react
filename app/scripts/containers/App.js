@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import App from '../components/App';
-import { plus, reset } from '../actions';
+import { plus, reset, changeText } from '../actions';
 
 const mapStateToProps = state => {
   return {
@@ -17,6 +17,9 @@ const mapDispatchToProps = dispatch => {
     },
     reset: () => {
       dispatch(reset());
+    },
+    changeText: text => {
+      dispatch(changeText(text));
     }
   };
 };

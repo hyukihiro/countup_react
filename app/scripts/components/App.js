@@ -7,7 +7,7 @@ class App extends React.Component {
   // }
 
   render() {
-    const { text, number, plus, reset, resetText } = this.props;
+    const { text, number, plus, reset, resetText, changeText } = this.props;
     return (
       <div>
         <Wrapper
@@ -16,6 +16,7 @@ class App extends React.Component {
           plus={plus}
           reset={reset}
           resetText={resetText}
+          changeText={changeText}
         />
       </div>
     );

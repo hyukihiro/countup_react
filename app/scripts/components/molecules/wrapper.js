@@ -3,6 +3,7 @@ import styled from 'react-emotion';
 import Button from '../atoms/button';
 import Text from '../atoms/textField';
 import Reset from '../atoms/reset';
+import InputField from '../atoms/inputField';
 
 const Wrap = styled('div')`
   display: flex;
@@ -10,7 +11,7 @@ const Wrap = styled('div')`
   align-items: center;
   flex-direction: column;
   width: 50%;
-  height: 160px;
+  height: 190px;
   left: 50%;
   top: 50%;
   position: absolute;
@@ -19,6 +20,7 @@ const Wrap = styled('div')`
 
 const Wrapper = props => (
   <Wrap>
+    <InputField changeText={props.changeText} />
     <Button text={props.text} plus={props.plus} />
     <Text number={props.number} />
     <Reset reset={props.reset} resetText={props.resetText} />
